@@ -1,0 +1,17 @@
+{
+  "mode": "moralis-pumpfun-finalize-partial",
+  "finalizedAt": "2026-06-28T13:12:35.202Z",
+  "outDir": "C:\\Users\\PC\\Desktop\\pump.fun-game\\moralis-dumps\\pumpfun-moralis-14d-full\\pumpfun-2026-06-28T13-05-03",
+  "rawFiles": [
+    "new.tokens.raw.jsonl"
+  ],
+  "rawLines": 81600,
+  "stateCounts": {
+    "new": 81600
+  },
+  "uniqueTokens": 12724,
+  "newestAt": "2026-06-28T13:11:20.000Z",
+  "oldestAt": "2026-06-27T23:57:16.000Z",
+  "jsonlPath": "C:\\Users\\PC\\Desktop\\pump.fun-game\\moralis-dumps\\pumpfun-moralis-14d-full\\pumpfun-2026-06-28T13-05-03\\tokens.merged.partial.jsonl",
+  "csvPath": "C:\\Users\\PC\\Desktop\\pump.fun-game\\moralis-dumps\\pumpfun-moralis-14d-full\\pumpfun-2026-06-28T13-05-03\\tokens.merged.partial.csv"
+}

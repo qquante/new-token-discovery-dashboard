@@ -1,0 +1,24 @@
+{
+  "mode": "moralis-pumpfun-dump",
+  "startedAt": "2026-06-28T13:41:41.191Z",
+  "finishedAt": "2026-06-28T13:42:09.474Z",
+  "states": [
+    "graduated"
+  ],
+  "pageLimit": 100,
+  "stateSummaries": [
+    {
+      "state": "graduated",
+      "pages": 32,
+      "total": 3200,
+      "accepted": 3197,
+      "error": null
+    }
+  ],
+  "uniqueTokens": 3197,
+  "metadataFetched": 0,
+  "metadataStatus": "disabled",
+  "outDir": "C:\\Users\\PC\\Desktop\\pump.fun-game\\moralis-dumps\\pumpfun-moralis-14d-graduated\\pumpfun-2026-06-28T13-41-41",
+  "tokensJsonlPath": "C:\\Users\\PC\\Desktop\\pump.fun-game\\moralis-dumps\\pumpfun-moralis-14d-graduated\\pumpfun-2026-06-28T13-41-41\\tokens.merged.jsonl",
+  "tokensCsvPath": "C:\\Users\\PC\\Desktop\\pump.fun-game\\moralis-dumps\\pumpfun-moralis-14d-graduated\\pumpfun-2026-06-28T13-41-41\\tokens.merged.csv"
+}

@@ -1,0 +1,16 @@
+{
+  "mode": "frontend-api-v3-best-effort",
+  "startedAt": "2026-06-28T12:53:09.985Z",
+  "finishedAt": "2026-06-28T12:53:10.439Z",
+  "since": "2026-06-14T12:53:09.984Z",
+  "until": "2026-06-28T12:53:09.984Z",
+  "stopReason": "max_pages",
+  "pageCount": 1,
+  "totalFetched": 70,
+  "totalAccepted": 70,
+  "totalDuplicates": 0,
+  "oldestAcceptedAt": "2026-06-28T12:50:55.000Z",
+  "newestAcceptedAt": "2026-06-28T12:53:07.000Z",
+  "jsonlPath": "C:\\Users\\PC\\Desktop\\pump.fun-game\\history-smoke2\\pump-history-2026-06-28T12-53-09\\tokens.jsonl",
+  "csvPath": "C:\\Users\\PC\\Desktop\\pump.fun-game\\history-smoke2\\pump-history-2026-06-28T12-53-09\\tokens.csv"
+}

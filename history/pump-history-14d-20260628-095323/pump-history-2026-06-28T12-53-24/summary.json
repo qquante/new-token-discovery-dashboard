@@ -1,0 +1,16 @@
+{
+  "mode": "frontend-api-v3-best-effort",
+  "startedAt": "2026-06-28T12:53:24.276Z",
+  "finishedAt": "2026-06-28T12:53:33.618Z",
+  "since": "2026-06-14T12:53:24.275Z",
+  "until": "2026-06-28T12:53:24.275Z",
+  "stopReason": "empty_page",
+  "pageCount": 18,
+  "totalFetched": 1190,
+  "totalAccepted": 1022,
+  "totalDuplicates": 168,
+  "oldestAcceptedAt": "2026-06-28T12:14:23.453Z",
+  "newestAcceptedAt": "2026-06-28T12:53:22.000Z",
+  "jsonlPath": "C:\\Users\\PC\\Desktop\\pump.fun-game\\history\\pump-history-14d-20260628-095323\\pump-history-2026-06-28T12-53-24\\tokens.jsonl",
+  "csvPath": "C:\\Users\\PC\\Desktop\\pump.fun-game\\history\\pump-history-14d-20260628-095323\\pump-history-2026-06-28T12-53-24\\tokens.csv"
+}

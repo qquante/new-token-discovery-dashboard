@@ -1,0 +1,24 @@
+{
+  "name": "pump-fun-game",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Read-only Pump.fun new token monitor.",
+  "scripts": {
+    "watch": "node src/watch-new-tokens.js",
+    "start": "node src/watch-new-tokens.js",
+    "smoke": "node src/watch-new-tokens.js --max=3",
+    "watch:games": "node --env-file=.env src/watch-game-candidates.js",
+    "games:smoke": "node --env-file=.env src/watch-game-candidates.js --max=3 --print-all",
+    "dashboard": "node --env-file=.env src/dashboard-server.js",
+    "x:recheck": "node --env-file=.env src/recheck-x-records.js",
+    "history": "node src/backfill-history.js",
+    "moralis:dump": "node src/moralis-pumpfun-dump.js",
+    "moralis:finalize": "node src/finalize-moralis-dump.js",
+    "rpc:creates": "node src/rpc-backfill-creates.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

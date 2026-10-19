@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pump.fun Game Scanner</title>
+    <link rel="stylesheet" href="/assets/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <h1>Pump.fun Game Scanner</h1>
+        <p id="subtitle">Carregando logs...</p>
+      </div>
+      <div class="topbar-actions">
+        <label class="field">
+          <span>Data</span>
+          <select id="dateSelect"></select>
+        </label>
+        <button id="reloadBtn" type="button">Atualizar</button>
+        <span id="streamState" class="stream-pill">offline</span>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="metrics" aria-label="Resumo">
+        <article class="metric">
+          <span>Total</span>
+          <strong id="metricTotal">0</strong>
+        </article>
+        <article class="metric">
+          <span>Candidatos</span>
+          <strong id="metricCandidates">0</strong>
+        </article>
+        <article class="metric">
+          <span>Alpha sem post</span>
+          <strong id="metricAlpha">0</strong>
+        </article>
+        <article class="metric">
+          <span>X confirmou</span>
+          <strong id="metricConfirmed">0</strong>
+        </article>
+        <article class="metric danger">
+          <span>Red flags X</span>
+          <strong id="metricRedFlags">0</strong>
+        </article>
+        <article class="metric warn">
+          <span>Revisar</span>
+          <strong id="metricReview">0</strong>
+        </article>
+      </section>
+
+      <section class="filters" aria-label="Filtros">
+        <label class="field search">
+          <span>Busca</span>
+          <input id="searchInput" type="search" placeholder="nome, mint, site, X..." />
+        </label>
+        <label class="field">
+          <span>X status</span>
+          <select id="xStatusFilter">
+            <option value="">Todos</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Classe</span>
+          <select id="classFilter">
+            <option value="">Todas</option>
+          </select>
+        </label>
+        <label class="toggle">
+          <input id="candidateOnly" type="checkbox" />
+          <span>So candidatos</span>
+        </label>
+        <label class="toggle">
+          <input id="redFlagOnly" type="checkbox" />
+          <span>So red flags</span>
+        </label>
+      </section>
+
+      <section class="content">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Token</th>
+                <th>Score</th>
+                <th>X</th>
+                <th>Site</th>
+                <th>Launch</th>
+                <th>Links</th>
+              </tr>
+            </thead>
+            <tbody id="recordsBody"></tbody>
+          </table>
+          <div id="emptyState" class="empty">Nenhum registro para os filtros atuais.</div>
+        </div>
+
+        <aside class="detail" aria-label="Detalhe do token">
+          <div id="detailEmpty" class="detail-empty">
+            Selecione um token para ver evidencias, mints e payload.
+          </div>
+          <div id="detailBody" class="detail-body hidden"></div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="/assets/app.js" type="module"></script>
+  </body>
+</html>

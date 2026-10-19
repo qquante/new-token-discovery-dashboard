@@ -1,0 +1,13 @@
+{
+  "mode": "moralis-pumpfun-created-only-partial",
+  "sourceEndpoint": "pumpfun/new",
+  "note": "Somente tokens de criacao retornados pelo endpoint Moralis new; nao inclui bonding/graduated.",
+  "rawRows": 81600,
+  "uniqueTokens": 12724,
+  "oldestCreatedAt": "2026-06-27T23:57:16.000Z",
+  "newestCreatedAt": "2026-06-28T13:11:20.000Z",
+  "missingFor14Days": "Falta tudo antes de 2026-06-27T23:57:16Z ate o cutoff de 14 dias; Moralis new nao retornou essa janela com as keys usadas.",
+  "csvPath": "C:/Users/PC/Desktop/pump.fun-game/moralis-dumps/pumpfun-created-only-partial-20260628/created.tokens.partial.csv",
+  "jsonlPath": "C:/Users/PC/Desktop/pump.fun-game/moralis-dumps/pumpfun-created-only-partial-20260628/created.tokens.partial.jsonl",
+  "rawPath": "C:/Users/PC/Desktop/pump.fun-game/moralis-dumps/pumpfun-created-only-partial-20260628/created.tokens.raw.jsonl"
+}

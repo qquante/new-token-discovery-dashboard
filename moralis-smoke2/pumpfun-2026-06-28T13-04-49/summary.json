@@ -1,0 +1,34 @@
+{
+  "mode": "moralis-pumpfun-dump",
+  "startedAt": "2026-06-28T13:04:49.948Z",
+  "finishedAt": "2026-06-28T13:04:52.656Z",
+  "states": [
+    "new",
+    "bonding",
+    "graduated"
+  ],
+  "pageLimit": 100,
+  "stateSummaries": [
+    {
+      "state": "new",
+      "pages": 1,
+      "total": 100
+    },
+    {
+      "state": "bonding",
+      "pages": 1,
+      "total": 100
+    },
+    {
+      "state": "graduated",
+      "pages": 1,
+      "total": 100
+    }
+  ],
+  "uniqueTokens": 300,
+  "metadataFetched": 0,
+  "metadataStatus": "skipped: Moralis HTTP 400: {\"statusCode\":400,\"message\":[\"This endpoint requires a higher plan to access.\"],\"error\":\"Bad Request\"}",
+  "outDir": "C:\\Users\\PC\\Desktop\\pump.fun-game\\moralis-smoke2\\pumpfun-2026-06-28T13-04-49",
+  "tokensJsonlPath": "C:\\Users\\PC\\Desktop\\pump.fun-game\\moralis-smoke2\\pumpfun-2026-06-28T13-04-49\\tokens.merged.jsonl",
+  "tokensCsvPath": "C:\\Users\\PC\\Desktop\\pump.fun-game\\moralis-smoke2\\pumpfun-2026-06-28T13-04-49\\tokens.merged.csv"
+}
