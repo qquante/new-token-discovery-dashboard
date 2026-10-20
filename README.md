@@ -1,76 +1,40 @@
 # New Token Discovery Dashboard
 
-**Read-only token discovery, social-link classification and scheduled rechecks.**
-
 ![Language: JavaScript](https://img.shields.io/badge/Language-JavaScript-F7DF1E?style=flat-square&logo=javascript) ![Node.js: 22+](https://img.shields.io/badge/Node.js-22%2B-555555?style=flat-square) [![License: MIT](https://img.shields.io/badge/License-MIT-555555?style=flat-square)](LICENSE)
 
-[Overview](#overview) · [Quickstart](#quickstart) · [Example](#example) · [Validation](#validation) · [Documentation](#documentation)
+Monitor new Pump.fun token observations, collect social links and surface game/app candidates with explicit classification reasons.
 
-## Overview
+This Node.js toolkit joins several research paths: streaming discovery, website/social inspection, X checks and historical/RPC backfills. The dashboard is a view over those records, not an independent source of verified project status.
 
-A read-only token-discovery toolkit with social-link classification, recheck policies and a local dashboard.
+## Why a candidate is shown
 
-**Stack:** JavaScript · Node.js · native fetch · HTML/CSS dashboard · node:test
+[game-classifier.js](src/game-classifier.js) scores text, known game/app hosts and HTML signals such as canvas, WebGL and engine references. Reasons retain tags and score contributions. A “game candidate” means the heuristics found relevant evidence; it does not prove there is a playable game.
 
-## Discovery keeps provisional results visible
+X checks have a separate policy. [x-check-policy.js](src/x-check-policy.js) selects full versus linked-only checks, while [x-recheck-schedule.js](src/x-recheck-schedule.js) revisits selected provisional states using bounded fast/slow intervals. Unavailable profiles and unclear mentions remain explicit states.
 
-| Component | Behavior |
-| --- | --- |
-| Watch | Source watchers produce new-token observations. |
-| Classify | Link/candidate classifiers expose explainable categories. |
-| Recheck | Policies schedule later checks for provisional social results. |
+## Start with local policy tests
 
-## Processing path
-
-```mermaid
-flowchart LR
-  N0["Token observation"]
-  N1["link extraction"]
-  N2["candidate/social classification"]
-  N3["local scan records"]
-  N4["dashboard"]
-N0 --> N1 --> N2 --> N3 --> N4
-```
-
-## Quickstart
+Requires Node.js 22+; the package has no declared third-party runtime dependencies.
 
 ```console
-node --test test/game-classifier.test.js test/social-links.test.js test/twitter-x-check.test.js test/x-check-policy.test.js test/x-recheck-schedule.test.js
+node --test
 ```
 
-The commands above install prerequisites or run the specified offline checks. Live collection, cloud operations, messaging and trading are separate operational steps when present.
+The suites cover classifier rules, social links, X interpretation and recheck scheduling. They do not establish current third-party API access.
 
-## Example
+## Choose an operational path
 
-**Inspect the workflow**
-
-Follow a token observation into extracted social links, classification and a local record. Treat an inconclusive social result as provisional and inspect the recheck policy. Source watchers, historical backfills and the dashboard server are separate package scripts; the quickstart runs only the named offline suites.
-
-## Configuration and storage
-
-Node.js 22+ with native fetch. JSON/JSONL records feed the HTML/CSS dashboard. [.env.example](.env.example) documents social API configuration. Live watcher/backfill commands may consume provider quotas.
-
-## Repository guide
-
-| Location | Responsibility |
+| Purpose | Declared npm command |
 | --- | --- |
-| [src/watch-new-tokens.js](src/watch-new-tokens.js) | Token watcher |
-| [src/game-classifier.js](src/game-classifier.js) | Candidate classifier |
-| [src/recheck-x-records.js](src/recheck-x-records.js) | Social rechecks |
-| [dashboard](dashboard) | Local interface |
+| New-token stream | `npm run watch` |
+| Game/app candidate watcher | `npm run watch:games` |
+| Local dashboard | `npm run dashboard` |
+| Historical input | `npm run history` |
+| Moralis collection/finalization | `npm run moralis:dump` / `npm run moralis:finalize` |
+| RPC creation backfill | `npm run rpc:creates` |
 
-## Validation
+Commands using `--env-file=.env` need local configuration; see [.env.example](.env.example). Even commands called `smoke` contact live sources. Historical `summary.partial.json` files preserve partial collection status and must not be interpreted as complete-chain coverage.
 
-These checks use offline fixtures or controlled backends.
+**Technology:** JavaScript · Node.js · native fetch · HTML/CSS dashboard · node:test
 
-## Scope and operational boundaries
-
-Classifier fixtures do not validate every live source. Current source authorization, API limits and dashboard data need separate configuration. This repository provides discovery/classification workflows.
-
-## Documentation
-
-- The repository guide above links directly to the implementation and configuration files.
-
-## License and attribution
-
-Project-authored source code is licensed under the [MIT License](LICENSE). Third-party components and datasets retain their respective rights and licenses.
+Project-authored source: [MIT](LICENSE). Third-party components retain their own notices and terms.
